@@ -19,14 +19,19 @@ namespace LinkedListTest
             Assert.AreEqual(30, result.data);            
         }
 
+        /// <summary>
+        /// Insert 40 after 30 in given list
+        /// </summary>
+        [TestMethod]
         public void GivenValue40_WhenSearch30InList_ThenAdd40ToAfter30()
         {
             LinkedList list = new LinkedList();
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            Node result = list.Search(30);
-            list.InsertionAtPerticulatPosition(3, 40); 
+            list.InsertionAtPerticulatPosition(40);
+            Node result = list.Search(40);
+            Assert.AreEqual(40, result.data);
 
         }
     }
