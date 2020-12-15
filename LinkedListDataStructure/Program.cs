@@ -11,9 +11,11 @@ namespace LinkedListDataStructure
             list.Add(70);
             Console.WriteLine("\nList Contains following data");
             list.Display();
+
             list.Add(30);
             Console.WriteLine("\nList Contains following data");
             list.Display();
+
             list.Add(56);
             Console.WriteLine("\nList Contains following data");           
             list.Display();

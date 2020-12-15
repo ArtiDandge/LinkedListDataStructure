@@ -7,6 +7,10 @@ namespace LinkedListDataStructure
     public class LinkedList
     {
         internal Node head;
+        /// <summary>
+        /// Method to add nodes to the linked list
+        /// </summary>
+        /// <param name="data">data represents linked list node data</param>
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -18,12 +22,14 @@ namespace LinkedListDataStructure
             {
                 node.next = head;
                 this.head = node;
-
             }
-            Console.WriteLine("{0} inserted to the linked list", node.data);
+            Console.WriteLine("{0} inserted to th linked list", node.data);
 
         }
-  
+
+        /// <summary>
+        /// Method to display linked list 
+        /// </summary>
         internal void Display()
         {
             Node temp = this.head;
@@ -34,7 +40,7 @@ namespace LinkedListDataStructure
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data);
+                Console.WriteLine(temp.data+" ");
                 temp = temp.next;
             }
         }
