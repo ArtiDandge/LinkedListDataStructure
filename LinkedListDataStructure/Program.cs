@@ -13,7 +13,9 @@ namespace LinkedListDataStructure
             list.Add(30);
             list.Add(56);
             list.Display();
-            list.Search(30);
+            list.InsertionAtPerticulatPosition(40);
+            Console.WriteLine("---------List after insertion of 40 --------");
+            list.Display();
         }
     }
 }

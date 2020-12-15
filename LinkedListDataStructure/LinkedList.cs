@@ -34,7 +34,7 @@ namespace LinkedListDataStructure
             if (head == null)
                 head = new Node(data);
             else
-            {           
+            {
                 Node newNode = new Node(data);
 
                 Node ptr = head;
@@ -47,7 +47,7 @@ namespace LinkedListDataStructure
                 }
                 int count = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
                 ptr = head;
-       
+
                 while (count-- > 1)
                     ptr = ptr.next;
 
