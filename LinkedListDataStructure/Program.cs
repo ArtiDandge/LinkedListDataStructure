@@ -17,6 +17,10 @@ namespace LinkedListDataStructure
             Console.WriteLine("\nList Contains following data");
             list.Display();
 
+            list.RemoveFirstNode();
+            Console.WriteLine("\nList Contains following data");
+            list.Display();
+
 
            
         }
