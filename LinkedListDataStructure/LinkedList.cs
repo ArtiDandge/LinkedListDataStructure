@@ -24,7 +24,38 @@ namespace LinkedListDataStructure
                 this.head = node;
             }
             Console.WriteLine("{0} inserted to th linked list", node.data);
+        }
 
+        internal void InsertionAtPerticulatPosition(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode = this.head;
+                head = newNode;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Out of Rang");
+            }
+            Console.WriteLine("\n head is printing" + head.data + "\n");
         }
 
         /// <summary>
