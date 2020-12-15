@@ -81,6 +81,10 @@ namespace LinkedListDataStructure
             }
         }
 
+        /// <summary>
+        /// Method to remove first node from a linked list
+        /// </summary>
+        /// <returns></returns>
         internal Node RemoveFirstNode()
         {
             if(this.head == null)
