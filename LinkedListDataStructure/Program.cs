@@ -17,12 +17,17 @@ namespace LinkedListDataStructure
             Console.WriteLine("\nList Contains following data");
             list.Display();
 
+            Console.WriteLine("----------Deletion of First Node---------");
             list.RemoveFirstNode();
-            Console.WriteLine("\nList Contains following data");
+            Console.WriteLine("\nList Contains following data after deleting first node");
+            list.Display();
+            list.Add(56);
+            Console.WriteLine("\n----------Deletion of Last Node---------");
+         
+            list.RemoveLastNode();
+            Console.WriteLine("\nList Contains following data after deleting last node");
             list.Display();
 
-
-           
         }
     }
 }

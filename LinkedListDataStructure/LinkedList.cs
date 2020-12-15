@@ -95,5 +95,28 @@ namespace LinkedListDataStructure
             return this.head;
         }
 
+        /// <summary>
+        /// Method to remove last node from linked list
+        /// </summary>
+        /// <returns></returns>
+        internal Node RemoveLastNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while(newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
+        }
+
     }
 }
