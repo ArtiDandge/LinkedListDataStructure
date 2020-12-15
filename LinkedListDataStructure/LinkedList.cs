@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace LinkedListDataStructure
 {
@@ -27,40 +26,34 @@ namespace LinkedListDataStructure
         }
 
         /// <summary>
-        /// Method to insert node at perticulat position
+        /// Method to insert node at middle possition of list
         /// </summary>
-        /// <param name="position">position where node to be inserted</param>
         /// <param name="data">data of that node</param>
-        internal void InsertionAtPerticulatPosition(int position, int data)
+        internal void InsertionAtPerticulatPosition(int data)
         {
-            if (position < 1)
-            {
-                Console.WriteLine("Invalid Position");
-            }
-
-            if (position == 1)
-            {
-                var newNode = new Node(data);
-                newNode = this.head;
-                head = newNode;
-            }
+            if (head == null)
+                head = new Node(data);
             else
-            {
-                while (position-- != 0)
+            {           
+                Node newNode = new Node(data);
+
+                Node ptr = head;
+                int len = 0;
+
+                while (ptr != null)
                 {
-                    if (position == 1)
-                    {
-                        Node node = new Node(data);
-                        node.next = this.head.next;
-                        head.next = node;
-                        break;
-                    }
-                    head = head.next;
+                    len++;
+                    ptr = ptr.next;
                 }
-                if (position != 1)
-                    Console.WriteLine("Out of Rang");
+                int count = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
+                ptr = head;
+       
+                while (count-- > 1)
+                    ptr = ptr.next;
+
+                newNode.next = ptr.next;
+                ptr.next = newNode;
             }
-            Console.WriteLine("\n head is printing" + head.data + "\n");
         }
 
         /// <summary>
@@ -116,6 +109,25 @@ namespace LinkedListDataStructure
             }
             newNode.next = null;
             return head;
+        }
+
+        /// <summary>
+        /// Method to Search node data in linked list 
+        /// </summary>
+        /// <param name="value">value to be search in list</param>
+        /// <returns></returns>
+        internal Node Search(int value)
+        {
+            while(this.head != null)
+            {
+                if(this.head.data == value)
+                {
+                    return this.head;
+                }
+                this.head = this.head.next;
+                Console.WriteLine("Search Success, {0} is present in linked list ",this.head.data);
+            }
+            return null;
         }
 
     }
