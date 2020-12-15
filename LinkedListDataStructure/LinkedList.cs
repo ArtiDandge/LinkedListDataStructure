@@ -26,6 +26,11 @@ namespace LinkedListDataStructure
             Console.WriteLine("{0} inserted to th linked list", node.data);
         }
 
+        /// <summary>
+        /// Method to insert node at perticulat position
+        /// </summary>
+        /// <param name="position">position where node to be inserted</param>
+        /// <param name="data">data of that node</param>
         internal void InsertionAtPerticulatPosition(int position, int data)
         {
             if (position < 1)
