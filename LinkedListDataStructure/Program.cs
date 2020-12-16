@@ -23,10 +23,13 @@ namespace LinkedListDataStructure
             Node newNode;
             newNode = sortedList.newNode(56);
             sortedList.sortedInsert(newNode);
+       
             newNode = sortedList.newNode(30);
             sortedList.sortedInsert(newNode);
+      
             newNode = sortedList.newNode(40);
             sortedList.sortedInsert(newNode);
+        
             newNode = sortedList.newNode(70);
             sortedList.sortedInsert(newNode);
 

@@ -25,7 +25,7 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine("{0} inserted to th linked list", node.data);
         }
-
+        
         /// <summary>
         /// Method to insert node at middle possition of list
         /// </summary>
