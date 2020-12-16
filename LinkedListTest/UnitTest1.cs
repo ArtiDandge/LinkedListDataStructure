@@ -9,7 +9,7 @@ namespace LinkedListTest
         /// Test case to search given value in linked list 
         /// </summary>
         [TestMethod]
-        public void GivenValue_WhenValuePresentInList_ShouldPassTest()
+        public void GivenValue_WhenValuePresentInList_ThenShouldPassTest()
         {
             LinkedList list = new LinkedList();
             list.Add(56);
@@ -23,7 +23,7 @@ namespace LinkedListTest
         /// Insert 40 after 30 in given list
         /// </summary>
         [TestMethod]
-        public void GivenValue40_WhenSearch30InList_ThenAdd40ToAfter30()
+        public void GivenValue40_WhenSearch30InList_ThenShouldAdd40ToAfter30()
         {
             LinkedList list = new LinkedList();
             list.Add(56);
@@ -39,7 +39,7 @@ namespace LinkedListTest
         /// Given key value, delete that node and return count of list
         /// </summary>
         [TestMethod]
-        public void GivenKeyValue_WhenPresentInLise_ThenDeleteThetKeyAndReturnListCount()
+        public void GivenKeyValue_WhenPresentInLise_ThenShouldDeleteThetKeyAndReturnListCount()
         {
             LinkedList list = new LinkedList();
             list.Add(70);
@@ -51,5 +51,6 @@ namespace LinkedListTest
             int result = list.size();
             Assert.AreEqual(3, result);
         }
+
     }
 }

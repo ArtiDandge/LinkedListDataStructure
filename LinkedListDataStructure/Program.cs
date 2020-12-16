@@ -18,6 +18,22 @@ namespace LinkedListDataStructure
             Console.WriteLine("---------List after Deletion of 40 --------");
             list.Display();
             Console.WriteLine("Linked List Count: "+list.size());
+
+            SortedLinkedList sortedList = new SortedLinkedList();
+            Node newNode;
+            newNode = sortedList.newNode(56);
+            sortedList.sortedInsert(newNode);
+            newNode = sortedList.newNode(30);
+            sortedList.sortedInsert(newNode);
+            newNode = sortedList.newNode(40);
+            sortedList.sortedInsert(newNode);
+            newNode = sortedList.newNode(70);
+            sortedList.sortedInsert(newNode);
+
+            Console.WriteLine("---------Sorted Linked List----------");
+            sortedList.Display();
+
+
         }      
            
     }
