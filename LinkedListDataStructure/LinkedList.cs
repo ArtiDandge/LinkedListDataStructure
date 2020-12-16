@@ -19,9 +19,20 @@ namespace LinkedListDataStructure
             }
             else
             {
+<<<<<<< HEAD
                 Node newNode = new Node(data);
                 newNode.next = head;
                 head = newNode;
+=======
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+                /*node.next = head;
+                this.head = node;*/
+>>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
             }
             Console.WriteLine("{0} inserted to th linked list", node.data);
         }
@@ -30,7 +41,7 @@ namespace LinkedListDataStructure
         /// Method to insert node at middle possition of list
         /// </summary>
         /// <param name="data">data of that node</param>
-        internal void InsertionAtPerticulatPosition(int data)
+        internal void InsertionAtPerticularPosition(int data)
         {
             if (head == null)
                 head = new Node(data);
@@ -70,7 +81,11 @@ namespace LinkedListDataStructure
             }
             while (temp != null)
             {
+<<<<<<< HEAD
                 Console.WriteLine(temp.data + " ");
+=======
+                Console.Write(temp.data+" ");
+>>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
                 temp = temp.next;
             }
         }
@@ -117,18 +132,18 @@ namespace LinkedListDataStructure
         /// </summary>
         /// <param name="value">value to be search in list</param>
         /// <returns></returns>
-        internal Node Search(int value)
+        internal int Search(int value)
         {
             while (this.head != null)
             {
                 if (this.head.data == value)
                 {
-                    return this.head;
+                    return this.head.data;
                 }
                 this.head = this.head.next;
                 Console.WriteLine("Search Success, {0} is present in linked list ", this.head.data);
             }
-            return null;
+            return head.data;
         }
 
         /// <summary>

@@ -15,8 +15,8 @@ namespace LinkedListTest
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            Node result = list.Search(30);
-            Assert.AreEqual(30, result.data);            
+            int result = list.Search(30);
+            Assert.AreEqual(30, result);            
         }
 
         /// <summary>
@@ -29,9 +29,9 @@ namespace LinkedListTest
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.InsertionAtPerticulatPosition(40);
-            Node result = list.Search(40);
-            Assert.AreEqual(40, result.data);
+            list.InsertionAtPerticularPosition(40);
+            int result = list.Search(40);
+            Assert.AreEqual(40, result);
 
         }
 
