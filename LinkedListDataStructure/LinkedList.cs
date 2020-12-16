@@ -19,8 +19,9 @@ namespace LinkedListDataStructure
             }
             else
             {
-                node.next = head;
-                this.head = node;
+                Node newNode = new Node(data);
+                newNode.next = head;
+                head = newNode;
             }
             Console.WriteLine("{0} inserted to th linked list", node.data);
         }
@@ -69,7 +70,7 @@ namespace LinkedListDataStructure
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data+" ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
         }
@@ -80,7 +81,7 @@ namespace LinkedListDataStructure
         /// <returns></returns>
         internal Node RemoveFirstNode()
         {
-            if(this.head == null)
+            if (this.head == null)
             {
                 return null;
             }
@@ -103,7 +104,7 @@ namespace LinkedListDataStructure
                 return null;
             }
             Node newNode = head;
-            while(newNode.next.next != null)
+            while (newNode.next.next != null)
             {
                 newNode = newNode.next;
             }
@@ -118,17 +119,64 @@ namespace LinkedListDataStructure
         /// <returns></returns>
         internal Node Search(int value)
         {
-            while(this.head != null)
+            while (this.head != null)
             {
-                if(this.head.data == value)
+                if (this.head.data == value)
                 {
                     return this.head;
                 }
                 this.head = this.head.next;
-                Console.WriteLine("Search Success, {0} is present in linked list ",this.head.data);
+                Console.WriteLine("Search Success, {0} is present in linked list ", this.head.data);
             }
             return null;
         }
+
+        /// <summary>
+        /// Method to Delete the node with given key
+        /// </summary>
+        /// <param name="key">key values to be deleted from list</param>
+        public void deleteNode(int key)
+        {
+            // Store head node 
+            Node temp = head, prev = null;
+
+            if (temp != null &&
+                temp.data == key)
+            {
+                // Changed head 
+                head = temp.next;
+                return;
+            }
+
+            while (temp != null &&
+                   temp.data != key)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            if (temp == null)
+                return;
+
+            prev.next = temp.next;
+        }
+
+        /// <summary>
+        /// Method to count size of list
+        /// </summary>
+        /// <returns></returns>
+        public int size()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+
 
     }
 }

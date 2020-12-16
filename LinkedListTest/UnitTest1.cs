@@ -34,5 +34,22 @@ namespace LinkedListTest
             Assert.AreEqual(40, result.data);
 
         }
+
+        /// <summary>
+        /// Given key value, delete that node and return count of list
+        /// </summary>
+        [TestMethod]
+        public void GivenKeyValue_WhenPresentInLise_ThenDeleteThetKeyAndReturnListCount()
+        {
+            LinkedList list = new LinkedList();
+            list.Add(70);
+            list.Add(40);
+            list.Add(30);
+            list.Add(56);
+            list.Display();
+            list.deleteNode(40);
+            int result = list.size();
+            Assert.AreEqual(3, result);
+        }
     }
 }
