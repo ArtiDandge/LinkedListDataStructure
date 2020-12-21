@@ -29,8 +29,8 @@ namespace LinkedListTest
             list.Add(56);
             list.Add(30);
             list.Add(70);
-            list.InsertionAtPerticularPosition(40);
-            int result = list.Search(40);
+            int result = list.Search(30);
+            list.InsertionAtPerticularPosition(40);           
             Assert.AreEqual(40, result);
 
         }

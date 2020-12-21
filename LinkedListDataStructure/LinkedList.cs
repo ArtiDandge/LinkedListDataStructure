@@ -19,20 +19,13 @@ namespace LinkedListDataStructure
             }
             else
             {
-<<<<<<< HEAD
-                Node newNode = new Node(data);
-                newNode.next = head;
-                head = newNode;
-=======
                 Node temp = head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
                 }
                 temp.next = node;
-                /*node.next = head;
-                this.head = node;*/
->>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
+               
             }
             Console.WriteLine("{0} inserted to th linked list", node.data);
         }
@@ -81,11 +74,8 @@ namespace LinkedListDataStructure
             }
             while (temp != null)
             {
-<<<<<<< HEAD
-                Console.WriteLine(temp.data + " ");
-=======
                 Console.Write(temp.data+" ");
->>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
+
                 temp = temp.next;
             }
         }
@@ -190,8 +180,6 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
             return count;
-        }
-
-       
+        }       
     }
 }

@@ -8,27 +8,16 @@ namespace LinkedListDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Data Structure Problem");
-<<<<<<< HEAD
-            LinkedList list = new LinkedList();
-            list.Add(70);
-            list.Add(40);
-            list.Add(30);
-=======
-            LinkedList list = new LinkedList();    
->>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
+            LinkedList list = new LinkedList();         
             list.Add(56);
             list.Add(30);
             list.Add(70);
             list.Display();
-<<<<<<< HEAD
-            list.deleteNode(40);
-            Console.WriteLine("---------List after Deletion of 40 --------");
-=======
+
             list.InsertionAtPerticularPosition(40);
-            Console.WriteLine("---------List after insertion of 40 --------");
->>>>>>> 56e307235671a734c5a6b60680626b01d36fec03
+            Console.WriteLine("\n---------List after insertion of 40 --------");
             list.Display();
-            Console.WriteLine("Linked List Count: "+list.size());
+            Console.WriteLine("\nLinked List Count: "+list.size());
 
             SortedLinkedList sortedList = new SortedLinkedList();
             Node newNode;
@@ -46,9 +35,6 @@ namespace LinkedListDataStructure
 
             Console.WriteLine("---------Sorted Linked List----------");
             sortedList.Display();
-
-
-        }      
-           
+        }                 
     }
 }

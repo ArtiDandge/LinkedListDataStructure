@@ -43,7 +43,6 @@ namespace LinkedListDataStructure
             return x;
         }
 
-
         /// <summary>
         /// Method to display linked list 
         /// </summary>
@@ -61,7 +60,5 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
         }
-
-
     }
 }
